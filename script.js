@@ -16,6 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    video.addEventListener('ended', function() {
+        let element = document.querySelector('.scoreScreen');
+        element.classList.remove('hide');
+    });
+
     function startTimer() {
         setTimeout(() => {
         clearInterval(timer);

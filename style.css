@@ -47,3 +47,97 @@
 .hide {
     display: none !important;
 }
+
+.scoreScreen{
+    position: absolute;
+    margin-left: 50vw;
+    margin-top: 50vh;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.title{
+    background-color: #0085FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title p {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.mainScore{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.LeftScore{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.LeftScore p{
+    text-align: center;
+}
+
+.RightScore{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.RightScore p{
+    text-align: center;
+}
+
+.ScoreBlueCircle{
+    width: 100px;
+    height: 100px;
+    background-color: #0085FF;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ScoreWhiteCircle{
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+strong{
+    font-size: 24px;
+    font-weight: bold;
+    color: #0085FF;
+}
