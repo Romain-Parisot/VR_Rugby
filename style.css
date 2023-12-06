@@ -3,9 +3,9 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    margin-left: 50%;
-    margin-top: 50%;
-    transform: translate(-50%, -50%);
+    margin-left: 50vw;
+    margin-top: 40vh;
+    transform: translate(-50%);
     color: white;
     z-index: 100;
     font-size: 30px;
@@ -14,6 +14,34 @@
     padding: 20px;
     width: 50px;
     height: 50px;
+}
+
+.message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    margin-left: 50vw;
+    transform: translate(-50%);
+    color: white;
+    z-index: 100;
+    padding: 20px;
+}
+
+.messageChoose{
+    margin-top: 50vh;
+    font-size: 32px;
+}
+
+.messageOption1{
+    margin-top: 60vh;
+    font-size: 24px;
+}
+
+.messageOption2{
+    margin-top: 65vh;
+    font-size: 24px;
 }
 
 .hide {

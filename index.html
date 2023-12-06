@@ -17,7 +17,7 @@
       </a-assets>
       <a-videosphere
       rotation="0 -90 0" src="#video" play-on-click></a-videosphere>
-    <a-camera>
+    <a-camera id="playButtonContainer">
       <a-entity
         id="playButton"
         position="0 0 -1.5"
@@ -26,11 +26,15 @@
               wrapCount:100;
               color: white;
               value: Click or tap to start video"
-        hide-on-play="#video"
-        onclick="dpNone()">
+        hide-on-play="#video">
       </a-entity>
     </a-camera>
     <div class="pauseTimer hide"></div>
+    <div class="message messageChoose hide"></div>
+    <div class="message messageOption1 hide"></div>
+    <div class="message messageOption2 hide"></div>
     </a-scene>
   </body>
 </html>
+
+
