@@ -1,0 +1,21 @@
+.pauseTimer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 100;
+    font-size: 30px;
+    background-color: #0085FF;
+    border-radius: 100% ;
+    padding: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.hide {
+    display: none !important;
+}

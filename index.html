@@ -8,62 +8,29 @@
     <script src="play-on-click.js"></script>
     <script src="hide-on-play.js"></script>
     <script src="script.js"></script>
-
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <a-scene>
       <a-assets>
-        <video id="video" crossorigin="anonymous" src="Rugbysimulation.mp4" playsinline webkit-playsinline></video>
+        <video id="video" autoplay crossorigin="anonymous" src="Rugbysimulation.mp4" playsinline webkit-playsinline></video>
       </a-assets>
       <a-videosphere
       rotation="0 -90 0" src="#video" play-on-click></a-videosphere>
     <a-camera>
       <a-entity
+        id="playButton"
         position="0 0 -1.5"
         text="align:center;
               width:6;
               wrapCount:100;
               color: white;
               value: Click or tap to start video"
-        hide-on-play="#video">
+        hide-on-play="#video"
+        onclick="dpNone()">
       </a-entity>
     </a-camera>
-    <a-entity
-    class="pauseTimer"
-    position="0 0 -1.5"
-    text="align:center;
-          width:6;
-          wrapCount:100;
-          color: white;"
-    hide-on-play="#video">
-  </a-entity>
-  <a-entity
-    class="pauseTimer"
-    position="0 0 -1.5"
-    text="align:center;
-          width:6;
-          wrapCount:100;
-          color: white;"
-    hide-on-play="#video">
-  </a-entity>
-  <a-entity
-    class="pauseTimer"
-    position="0 0 -1.5"
-    text="align:center;
-          width:6;
-          wrapCount:100;
-          color: white;"
-    hide-on-play="#video">
-  </a-entity>
-  <a-entity
-    class="pauseTimer"
-    position="0 0 -1.5"
-    text="align:center;
-          width:6;
-          wrapCount:100;
-          color: white;"
-    hide-on-play="#video">
-  </a-entity>
+    <div class="pauseTimer hide"></div>
     </a-scene>
   </body>
 </html>

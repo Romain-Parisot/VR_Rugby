@@ -1,41 +1,49 @@
 document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('video');
-    const overlayText = document.querySelectorAll('#overlayText');
-  
+    const overlayText = document.querySelectorAll('.pauseTimer');
+
     let countdown = 4;
     let timer;
-  
+
     video.addEventListener('loadedmetadata', function() {
-      startTimer();
+        startTimer();
     });
-  
+
     function startTimer() {
-      setTimeout(() => {
+        setTimeout(() => {
         clearInterval(timer);
         countdown = 4;
-  
+        console.log(overlayText);
+        video.pause();
         overlayText.forEach(el => {
-            el.setAttribute('visible', 'true');
+            el.classList.toggle('hide');
+            let countdownValue = document.createTextNode(countdown);
+            el.appendChild(countdownValue);            
         });
-        overlayText.forEach(el => {
-            el.setAttribute('text', {
-                value: countdown,
-                color: 'white',
-                align: 'center',
-              });
-        })
-  
+
         timer = setInterval(() => {
-          countdown -= 1;
-          if (countdown >= 0) {
-            overlayText.setAttribute('text', { value: countdown });
-          } else {
+            countdown -= 1;
+            if (countdown >= 0) {
+                overlayText.forEach(el => {
+                    el.textContent = '';
+                    let countdownValue = document.createTextNode(countdown);
+                    el.appendChild(countdownValue);
+                    console.log(countdown);
+                });
+            } else {
             clearInterval(timer);
-            overlayText.setAttribute('visible', 'false');
+            overlayText.forEach(el => {
+                el.classList.toggle('hide');           
+            });
             video.play();
-          }
+            }
         }, 1000);
-      }, 5000);
+        }, 5000);
     }
-  });
-  
+});
+
+
+function dpNone(){
+    var entity = document.querySelector('#playButton');
+    entity.classList.add('hide');
+}
