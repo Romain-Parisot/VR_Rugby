@@ -3,16 +3,18 @@ AFRAME.registerComponent('play-on-click', {
       this.onClick = this.onClick.bind(this);
     },
     play: function () {
-      window.addEventListener('click', this.onClick);
+        let startElmt = document.getElementById('startElmt');
+        startElmt.addEventListener('click', this.onClick);
     },
     pause: function () {
-      window.removeEventListener('click', this.onClick);
+        let startElmt = document.getElementById('startElmt');
+        startElmt.removeEventListener('click', this.onClick);
     },
     onClick: function (evt) {
         var videoEl = this.el.getAttribute('material').src;
         if (!videoEl) { return; }
         this.el.object3D.visible = true;
         videoEl.play();
-        window.removeEventListener('click', this.onClick);
-    }
+        let startElmt = document.getElementById('startElmt');
+        startElmt.removeEventListener('click', this.onClick);    }
   });

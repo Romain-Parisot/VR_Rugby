@@ -7,7 +7,6 @@
     <script src="aframe-master.js"></script>
     <script src="play-on-click.js"></script>
     <script src="hide-on-play.js"></script>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <!-- Cette simulation est un projet scolaire, et la vidéo utiliser appartient a Strathallan School, link:https://www.youtube.com/watch?v=KezlkOM7f94 -->
     <!-- This Simulation is scolar project, and the video i used here, belongs to Strathallan School, link:https://www.youtube.com/watch?v=KezlkOM7f94 -->
@@ -27,10 +26,16 @@
               width:6;
               wrapCount:100;
               color: white;
-              value: Click or tap to start video"
+              value: Click on a flag to start the simulation"
         hide-on-play="#video">
       </a-entity>
     </a-camera>
+    <div class="language">
+      <img id="startElmt" src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1eb-1f1f7.svg" alt="French flag"/>
+      <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1ec-1f1e7.svg" alt="UK flag"/>
+      <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1e9-1f1ea.svg" alt="German flag"/>
+      <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/svg/1f1ea-1f1f8.svg" alt="Spanish flag"/>
+    </div>
     <div class="pauseTimer hide"></div>
     <div class="message messageChoose hide"></div>
     <div class="message messageOption1 hide"></div>
@@ -62,6 +67,7 @@
       </div>
     </div>
     </a-scene>
+    <script src="script.js"></script>
   </body>
 </html>
 

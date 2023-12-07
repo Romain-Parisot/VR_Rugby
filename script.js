@@ -65,3 +65,11 @@ document.addEventListener('click', function() {
     let element = document.querySelector('#playButton');
     element ? element.remove() : null;
 });
+
+let startElmt = document.getElementById('startElmt');
+let language = document.querySelector('.language');
+
+startElmt.addEventListener('click', function() {
+    language.classList.remove('language');
+    language.classList.add('hide');
+});
